@@ -3,7 +3,7 @@
 # @repo:    https://github.com/easzlab/dockerfile-kubeasz-sys-pkg
 # @ref:     https://github.com/easzlab/kubeasz
 
-FROM centos:7 as downloader
+FROM miraclemie/centos:7 as downloader
 
 RUN yum install --downloadonly --downloaddir=/root/down \
       bash-completion \
