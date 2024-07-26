@@ -19,7 +19,7 @@ RUN apt update && \
     tar zcvf /tmp/debian_10.tgz *.deb
 
 # storing packages on alpine
-FROM alpine:3.16
+FROM miraclemie/alpine:3.16
 
 ENV SYS_PKG_VER=1.0.1
 

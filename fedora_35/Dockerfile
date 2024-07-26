@@ -18,7 +18,7 @@ RUN yum install --downloadonly --downloaddir=/root/down -y \
     tar zcvf /tmp/fedora_35.tgz *.rpm
 
 # storing packages on alpine
-FROM alpine:3.16
+FROM miraclemie/alpine:3.16
 
 ENV SYS_PKG_VER=1.0.1
 
