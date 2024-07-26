@@ -15,9 +15,9 @@ jobs:
 #          - dist: ubuntu_20
 #          - dist: ubuntu_22
 #         - dist: ubuntu_24
-          - dist: debian_10
+#          - dist: debian_10
 #          - dist: debian_11
-#          - dist: centos_7
+          - dist: centos_7
 #          - dist: fedora_34
 #          - dist: fedora_35
 #          - dist: fedora_36
