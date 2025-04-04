@@ -10,24 +10,23 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          
-#          - dist: ubuntu_16
-#          - dist: ubuntu_18
-#          - dist: ubuntu_20
-#          - dist: ubuntu_22
-#         - dist: ubuntu_24
-#          - dist: debian_10
-#          - dist: debian_11
+          - dist: ubuntu_16
+          - dist: ubuntu_18
+          - dist: ubuntu_20
+          - dist: ubuntu_22
+          - dist: ubuntu_24
+          - dist: debian_10
+          - dist: debian_11
           - dist: centos_7
-#          - dist: fedora_34
-#          - dist: fedora_35
-#          - dist: fedora_36
-#          - dist: fedora_37
-#          - dist: almalinux_8
-#          - dist: almalinux_9
-#          - dist: rocky_8
-#          - dist: rocky_9
-#          - dist: opensuse_leap_15
+          - dist: fedora_34
+          - dist: fedora_35
+          - dist: fedora_36
+          - dist: fedora_37
+          - dist: almalinux_8
+          - dist: almalinux_9
+          - dist: rocky_8
+          - dist: rocky_9
+          - dist: opensuse_leap_15
     permissions:
       contents: read
       packages: write
@@ -62,8 +61,8 @@ jobs:
           context: "${{ matrix.dist }}"
           file: "${{ matrix.dist }}/Dockerfile"
           tags: |
-            ${{ secrets.HUB_DOCKER_USERNAME }}/kubeasz-sys-pkg:1.0.1_${{ matrix.dist }}
-            registry.cn-hangzhou.aliyuncs.com/${{ secrets.HUB_DOCKER_USERNAME }}/kubeasz-sys-pkg:1.0.1_${{ matrix.dist }}
+            ${{ secrets.HUB_DOCKER_USERNAME }}/kubeasz-sys-pkg:1.0.2_${{ matrix.dist }}
+            registry.cn-hangzhou.aliyuncs.com/${{ secrets.HUB_DOCKER_USERNAME }}/kubeasz-sys-pkg:1.0.2_${{ matrix.dist }}
           labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/amd64,linux/arm64
           push: true
